@@ -1,5 +1,5 @@
 #PLEASE WRITE THE GITHUB URL BELOW!
-#
+#https://github.com/beenyu0403/OSS_Project2.git
 
 import sys
 import pandas as pd
@@ -31,7 +31,7 @@ def split_dataset(dataset_df, testset_size):
     #To-Do: Implement this function
 	X = dataset_df.drop(columns="target", axis=1)
 	y = dataset_df.target
-	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=testset_size, shuffle=False, random_state=2)
+	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=testset_size, random_state=2)
 	return X_train, X_test, y_train, y_test
 
 def decision_tree_train_test(x_train, x_test, y_train, y_test):
